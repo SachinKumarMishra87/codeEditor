@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0d0c0c;
+  color: #fff;
+  overflow-x: hidden;
+}
+html {
+  overflow-x: hidden;
+}
+.inputBox {
+  width: 100%;
+  background-color: #141414;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.inputBox input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+}
+
+.btnBlue {
+  background-color: #00aeef;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+.btnBlue:hover {
+  background-color: #0086b3;
+}
+.grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px;
+}
+
+.lightMode {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.lightMode .navbar {
+  background-color: #fff;
+}
+
+.lightMode .tabs {
+  background-color: #f7f7f7;
+}
+.lightMode .tabs .tab {
+  background-color: #c2c1c1;
+  color: #000;
+}
+
+.lightMode .btn {
+  background-color: #c2c1c1;
+  color: #000;
+}
+
+.no-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #f3f4f6; /* Equivalent to Tailwind's bg-gray-100 */
+}
+
+.no-page-container h1 {
+  font-size: 2.25rem; /* 4xl for mobile */
+  font-weight: bold;
+  color: #1f2937; /* Equivalent to Tailwind's text-gray-800 */
+}
+
+@media (min-width: 1024px) {
+  .no-page-container h1 {
+    font-size: 3.75rem; /* 6xl for desktop */
+  }
+}
+
+.no-page-container p {
+  font-size: 1.125rem; /* lg for mobile */
+  color: #4b5563; /* Equivalent to Tailwind's text-gray-600 */
+}
+
+/* ------------------------------------------------------------------------ */
+.resEditor {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  position: relative; /* To position the output container correctly */
+}
+
+.editor-container {
+  width: 100% !important; /* Expand the editor to full width on small screens */
+  height: calc(100vh - '120px') !important;
+}
+
+iframe {
+  width: 100% !important;
+  min-height: 60vh; /* Adjust height of iframe for small screens */
+}
+
+.tabs {
+  padding: 10px; /* Adjust padding for tabs on small screens */
+}
+
+.tab {
+  border-radius: 2px;
+}
+
+.output-button,
+.back-button {
+  padding: 7px 10px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 3px;
+  margin: 20px;
+}
+
+footer {
+  display: flex; /* Show footer on small screens */
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: calc(100vh - 90vh) !important;
+  background-color: #333;
+  padding: 10px;
+  z-index: 1000; /* Ensure the footer is above other content */
+}
+
+@media (min-width: 1000px) {
+  .resEditor {
+    flex-direction: row; /* Maintain horizontal layout */
+  }
+  .editor-container {
+    width: 50%; /* Keep the editor taking half the width */
+  }
+
+  iframe {
+    width: 50%; /* Adjust iframe width to take half the screen on larger screens */
+    height: calc(100vh - 50px); /* Adjust iframe height to fit the viewport */
+  }
+}
+
+.output-container {
+  position: absolute; /* Make output container absolute */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10; /* Ensure it appears above other content */
+  background-color: white; /* Ensure background is white */
+}
+
