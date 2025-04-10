@@ -18,7 +18,7 @@ function About() {
         <div className="flex-1 md:max-w-[50%] mb-6 md:mb-0">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">About Me</h1>
           <p className="text-lg mb-3">
-            Hello, I'm Sachin Mishra. I am a BCA final year student with skills in
+            Hello, I'm Shivanshu. I am a BCA final year student with skills in
             MERN stack development and problem solving. I have worked on various
             projects including weather apps, online IDEs, and editor projects.
           </p>
